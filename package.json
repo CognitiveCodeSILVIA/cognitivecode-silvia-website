@@ -1,0 +1,25 @@
+{
+  "name": "cognitivecode-silvia-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "cognitivecode-silvia-website",
+  "author": "Tommy Tho",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^5.7.0",
+    "gatsby-plugin-sitemap": "^6.7.0",
+    "gatsby-source-filesystem": "^5.7.0",
+    "gatsby-transformer-remark": "^6.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

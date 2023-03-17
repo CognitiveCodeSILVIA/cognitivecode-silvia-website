@@ -4,6 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 export const ButtonOutlined = withStyles(() => ({
   root: {
     textTransform: "none",
+    fontFamily: "inherit",
     fontWeight: 700,
     padding: "0.5em 1em",
     backgroundColor: "#FFFFFF",

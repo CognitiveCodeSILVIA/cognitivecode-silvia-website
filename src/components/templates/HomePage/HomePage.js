@@ -1,10 +1,10 @@
 import * as React from "react";
-import { ButtonOutlined as Button, ButtonOutlined } from "../../atoms";
+import { Header } from "../../organisms";
 
 export const HomePage = () => {
   return (
     <>
-      <Button>Chat with Silvia</Button>
+      <Header />
     </>
   );
 };

@@ -5,12 +5,12 @@ export const ButtonOutlined = withStyles(() => ({
   root: {
     textTransform: "none",
     fontFamily: "inherit",
-    fontWeight: 700,
-    padding: "0.5em 1em",
-    backgroundColor: "#FFFFFF",
-    color: "#043A74",
-    border: "2px solid #043A74",
-    borderRadius: "5px",
+    fontWeight: "bold",
+    padding: "0.5em 1.5em",
+    backgroundColor: "#FFFFFF 0",
+    color: "#FFFFFF",
+    border: "2px solid #4FCCCD",
+    borderRadius: "13px",
     "&:hover": {
       backgroundColor: "#FFFFFF",
       color: "#043A74",

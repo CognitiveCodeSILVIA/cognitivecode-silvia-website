@@ -4,6 +4,8 @@ import { CustomTabs } from "../../molecules";
 
 // Styles
 const navBarStyle = {
+  justifyContent: "space-between",
+  display: "flex",
   backgroundColor: "#051334",
   borderRadius: "0 0 25px 25px",
   padding: "1.5em 2em",

@@ -1,4 +1,4 @@
-import * as React from "React";
+import * as React from "react";
 import { Link } from "gatsby";
 import { Typography } from "@material-ui/core";
 import { CCLogoWhite } from "../../atoms";

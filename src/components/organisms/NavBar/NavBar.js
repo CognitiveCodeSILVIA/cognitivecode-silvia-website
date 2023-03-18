@@ -1,10 +1,12 @@
 import * as React from "react";
+import { Link } from "gatsby";
 import { ButtonOutlined as Button } from "../../atoms";
 import { CustomTabs, HomeIcon } from "../../molecules";
 
 // Styles
 const navBarStyle = {
   justifyContent: "space-between",
+  alignItems: "center",
   display: "flex",
   backgroundColor: "#051334",
   borderRadius: "0 0 25px 25px",
@@ -28,7 +30,9 @@ export const NavBar = () => {
     <div id="nav-bar" style={navBarStyle}>
       <HomeIcon />
       <CustomTabs navItems={navItems} />
-      <Button>{buttonText}</Button>
+      <Link to="/">
+        <Button>{buttonText}</Button>
+      </Link>
     </div>
   );
 };

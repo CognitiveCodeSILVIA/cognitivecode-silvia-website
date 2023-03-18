@@ -6,6 +6,7 @@ export const NavItem = withStyles(() => ({
   root: {
     fontFamily: "inherit",
     textTransform: "none",
+    opacity: 1,
     color: "#FFFFFF",
     "&:focus": {
       opacity: 1,

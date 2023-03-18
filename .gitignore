@@ -1,3 +1,7 @@
+#dependencies
 node_modules/
-.cache/
 public
+yarn.lock
+
+#misc
+.cache/

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { ButtonOutlined as Button } from "../../atoms";
-import { CustomTabs, HomeIcon } from "../../molecules";
+import { Navigation, HomeIcon } from "../../molecules";
 
 // Styles
 const navBarStyle = {
@@ -29,7 +29,7 @@ export const NavBar = () => {
   return (
     <div id="nav-bar" style={navBarStyle}>
       <HomeIcon />
-      <CustomTabs navItems={navItems} />
+      <Navigation navItems={navItems} />
       <Link to="/">
         <Button>{buttonText}</Button>
       </Link>

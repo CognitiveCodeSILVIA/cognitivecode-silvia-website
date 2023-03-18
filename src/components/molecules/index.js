@@ -1,4 +1,4 @@
-import { CustomTabs } from "./Tabs";
+import { Navigation } from "./Navigation";
 import { HomeIcon } from "./HomeIcon";
 
-export { CustomTabs, HomeIcon };
+export { Navigation, HomeIcon };

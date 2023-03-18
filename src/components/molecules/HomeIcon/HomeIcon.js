@@ -14,6 +14,7 @@ const CustomTypography = withStyles(() => ({
   },
 }))(Typography);
 
+// Styles
 const homeIconStyles = {
   display: "flex",
   width: "fit-content",
@@ -21,15 +22,11 @@ const homeIconStyles = {
   cursor: "pointer",
 };
 
-const handleClick = () => {};
-
 export const HomeIcon = () => {
   return (
-    <div id="cc-logo-nav-bar" style={homeIconStyles}>
-      <Link to="/">
-        <CCLogoWhite size="small" />
-        <CustomTypography>cognitivecode</CustomTypography>
-      </Link>
-    </div>
+    <Link to="/" id="cc-logo-nav-bar" style={homeIconStyles}>
+      <CCLogoWhite size="small" />
+      <CustomTypography>cognitivecode</CustomTypography>
+    </Link>
   );
 };

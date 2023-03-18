@@ -1,6 +1,5 @@
 import * as React from "react";
-import { Typography } from "@material-ui/core";
-import { ButtonOutlined as Button, CCLogoWhite } from "../../atoms";
+import { ButtonOutlined as Button } from "../../atoms";
 import { CustomTabs, HomeIcon } from "../../molecules";
 
 // Styles

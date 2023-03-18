@@ -9,6 +9,7 @@ const navBarStyle = {
   backgroundColor: "#051334",
   borderRadius: "0 0 25px 25px",
   padding: "1.5em 2em",
+  minWidth: "max-content",
 };
 
 // Constants

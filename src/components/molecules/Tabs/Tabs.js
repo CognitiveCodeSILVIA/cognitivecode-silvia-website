@@ -1,17 +1,7 @@
 import * as React from "react";
-import { Tabs, Tab, Typography } from "@material-ui/core";
+import { StyledTab } from "../../atoms";
+import { Tabs } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
-
-const StyledTab = withStyles(() => ({
-  root: {
-    fontFamily: "inherit",
-    textTransform: "none",
-    color: "#FFFFFF",
-    "&:focus": {
-      opacity: 1,
-    },
-  },
-}))((props) => <Tab disableRipple {...props} />);
 
 const StyledTabs = withStyles({
   indicator: {
@@ -19,7 +9,7 @@ const StyledTabs = withStyles({
     justifyContent: "center",
     backgroundColor: "transparent",
     "& > span": {
-      maxWidth: 30,
+      maxWidth: 16,
       width: "100%",
       backgroundColor: "#FFFFFF",
     },
@@ -38,7 +28,7 @@ export const CustomTabs = (props) => {
     <>
       <StyledTabs value={value} onChange={handleChange}>
         {navItems.map((element) => {
-          return <StyledTab label={element} />;
+          return <StyledTab key={element} label={element} />;
         })}
       </StyledTabs>
     </>

@@ -5,7 +5,7 @@ export const ButtonOutlined = withStyles(() => ({
   root: {
     textTransform: "none",
     fontFamily: "inherit",
-    fontWeight: "bold",
+    fontWeight: 400,
     padding: "0.5em 1.5em",
     backgroundColor: "#FFFFFF 0",
     color: "#FFFFFF",

@@ -2,7 +2,7 @@ import * as React from "react";
 import { TechnologyPage as Technology } from "../components/templates";
 
 const pageStyles = {
-  padding: 96,
+  padding: "0 96px",
   fontFamily: "Ubuntu",
   fontStyle: "normal",
 };

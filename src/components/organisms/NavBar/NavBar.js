@@ -1,6 +1,7 @@
 import * as React from "react";
-import { ButtonOutlined as Button } from "../../atoms";
-import { CustomTabs } from "../../molecules";
+import { Typography } from "@material-ui/core";
+import { ButtonOutlined as Button, CCLogoWhite } from "../../atoms";
+import { CustomTabs, HomeIcon } from "../../molecules";
 
 // Styles
 const navBarStyle = {
@@ -25,6 +26,7 @@ const buttonText = "Chat with SILVIA";
 export const NavBar = () => {
   return (
     <div id="nav-bar" style={navBarStyle}>
+      <HomeIcon />
       <CustomTabs navItems={navItems} />
       <Button>{buttonText}</Button>
     </div>

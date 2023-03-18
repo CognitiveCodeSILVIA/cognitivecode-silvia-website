@@ -5,6 +5,9 @@ import { Tabs } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 
 const StyledTabs = withStyles({
+  root: {
+    padding: "0 12px",
+  },
   indicator: {
     display: "flex",
     justifyContent: "center",

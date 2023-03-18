@@ -1,10 +1,10 @@
 import * as React from "react";
-import { Header } from "../../organisms";
+import { NavBar } from "../../organisms";
 
 export const HomePage = () => {
   return (
     <>
-      <Header />
+      <NavBar />
     </>
   );
 };

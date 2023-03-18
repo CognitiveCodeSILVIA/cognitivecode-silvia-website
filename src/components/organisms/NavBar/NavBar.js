@@ -3,7 +3,7 @@ import { ButtonOutlined as Button } from "../../atoms";
 import { CustomTabs } from "../../molecules";
 
 // Styles
-const headerStyle = {
+const navBarStyle = {
   backgroundColor: "#051334",
   borderRadius: "0 0 25px 25px",
   padding: "1.5em 2em",
@@ -20,9 +20,9 @@ const navItems = [
 ];
 const buttonText = "Chat with SILVIA";
 
-export const Header = () => {
+export const NavBar = () => {
   return (
-    <div id="header" style={headerStyle}>
+    <div id="nav-bar" style={navBarStyle}>
       <CustomTabs navItems={navItems} />
       <Button>{buttonText}</Button>
     </div>

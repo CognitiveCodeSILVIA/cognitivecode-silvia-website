@@ -25,7 +25,7 @@ const navItems = [
 ];
 const buttonText = "Chat with SILVIA";
 
-export const NavBar = () => {
+export const NavBar = ({ pageTitle, children }) => {
   return (
     <div id="nav-bar" style={navBarStyle}>
       <HomeIcon />

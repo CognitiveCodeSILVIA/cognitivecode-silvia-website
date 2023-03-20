@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { ButtonOutlined as Button } from "../../atoms";
 import { Navigation, CCTextIcon } from "../../molecules";
+import { siteMetadata } from "../../../../gatsby-config";
 
 // Styles
 const navBarStyles = {
@@ -14,24 +15,15 @@ const navBarStyles = {
   minWidth: "max-content",
 };
 
-// Constants
-const navItems = [
-  "Home",
-  "Technology",
-  "Features",
-  "Integrations",
-  "Solutions",
-  "Contact",
-];
-const buttonText = "Chat with SILVIA";
-
-export const NavBar = ({ pageTitle, children }) => {
+export const NavBar = () => {
   const textIconColor = "white";
+  const buttonText = "Chat with SILVIA";
+  const pages = siteMetadata.menuLinks;
 
   return (
     <div id="nav-bar" style={navBarStyles}>
       <CCTextIcon color={textIconColor} />
-      <Navigation navItems={navItems} />
+      <Navigation pages={pages} />
       <Link to="/">
         <Button>{buttonText}</Button>
       </Link>

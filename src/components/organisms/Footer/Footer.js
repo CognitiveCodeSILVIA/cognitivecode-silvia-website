@@ -3,6 +3,7 @@ import * as React from "react";
 import { CCTextIcon } from "../../molecules";
 import { Typography } from "@material-ui/core";
 import { Email as EmailIcon, Place as PlaceIcon } from "@material-ui/icons";
+import { siteMetadata } from "../../../../gatsby-config";
 
 // Styles
 const ccIdentityStyles = {
@@ -49,6 +50,11 @@ const footerStyles = {
   display: "flex",
 };
 
+const hyperlinkStyles = {
+  textDecoration: "none",
+  cursor: "pointer",
+};
+
 const CCIdentity = () => {
   const color = "navy";
   const text =
@@ -89,10 +95,27 @@ const Contact = () => {
 };
 
 export const Footer = () => {
+  const pages = siteMetadata.menuLinks;
+
   return (
     <div style={footerStyles}>
-      <CCIdentity />
-      <Contact />
+      <div style={footerStyles}>
+        <CCIdentity />
+        <Contact />
+      </div>
+      <div>
+        <ul style={listStyles}>
+          {pages.map((page) => {
+            return (
+              <li style={itemStyles} key={page.name}>
+                <a href={page.link} style={hyperlinkStyles}>
+                  {page.name}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 };

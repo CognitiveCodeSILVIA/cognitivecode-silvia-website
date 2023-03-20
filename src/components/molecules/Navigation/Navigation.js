@@ -20,9 +20,9 @@ const StyledTabs = withStyles({
   },
 })((props) => <Tabs {...props} TabIndicatorProps={{ children: <span /> }} />);
 
-export const Navigation = (props) => {
-  const navItems = props.navItems;
+export const Navigation = ({ pages }) => {
   const path = window.location.pathname;
+
   const selectedTab = () => {
     if (path.includes("/technology")) return 1;
     if (path.includes("/features")) return 2;
@@ -35,17 +35,10 @@ export const Navigation = (props) => {
   return (
     <nav>
       <StyledTabs value={selectedTab()}>
-        {navItems.map((element) => {
-          if (element === "Home") {
-            return (
-              <Link to={"/"} key={`/${element}`}>
-                <NavItem key={element} label={element} />
-              </Link>
-            );
-          }
+        {pages.map((page) => {
           return (
-            <Link to={`/${element.toLowerCase()}`} key={`/${element}`}>
-              <NavItem key={element} label={element} />
+            <Link to={page.link} key={page.link}>
+              <NavItem key={page.name} label={page.name} />
             </Link>
           );
         })}

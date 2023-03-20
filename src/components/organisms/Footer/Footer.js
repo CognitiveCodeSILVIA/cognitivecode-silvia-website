@@ -6,8 +6,14 @@ import { Email as EmailIcon, Place as PlaceIcon } from "@material-ui/icons";
 import { siteMetadata } from "../../../../gatsby-config";
 
 // Styles
+const borderStyles = {
+  borderTop: "solid 1px #3D588F",
+  alignSelf: "center",
+  width: "100%",
+};
+
 const ccIdentityStyles = {
-  margin: "2em",
+  margin: "2em 2em 2em 0",
   width: "250px",
   height: "fit-content",
   color: "#253D6D",
@@ -23,6 +29,45 @@ const contactStyles = {
   paddingLeft: "2em",
 };
 
+const externalLinksStyles = {
+  display: "flex",
+  justifyContent: "space-between",
+  width: "300px",
+  paddingTop: "2em",
+  paddingRight: "3em",
+};
+
+const footerStyles = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+  margin: "1em",
+  minWidth: "1020px",
+};
+
+const footerChildrenStyles = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+};
+
+const footerLinksStyles = {
+  listStyle: "none",
+  paddingLeft: 0,
+  lineHeight: "2.5em",
+};
+
+const hyperlinkStyles = {
+  textDecoration: "none",
+  cursor: "pointer",
+};
+
+const leftContainerStyles = {
+  display: "flex",
+  justifyContent: "space-between",
+  padding: "1em",
+};
+
 const listStyles = {
   listStyle: "none",
   paddingLeft: 0,
@@ -32,7 +77,7 @@ const listBreakStyles = {
   paddingBottom: "0.5em",
 };
 
-const itemStyles = {
+const listItemStyles = {
   display: "flex",
   alignItems: "center",
 };
@@ -42,17 +87,9 @@ const markerStyles = {
 };
 
 const typographyStyles = {
+  fontFamily: "Source Sans Pro",
   fontWeight: 700,
   fontSize: "x-large",
-};
-
-const footerStyles = {
-  display: "flex",
-};
-
-const hyperlinkStyles = {
-  textDecoration: "none",
-  cursor: "pointer",
 };
 
 const CCIdentity = () => {
@@ -76,14 +113,14 @@ const Contact = () => {
     <div style={contactStyles}>
       <Typography style={typographyStyles}>Contact Us</Typography>
       <ul style={listStyles}>
-        <li style={itemStyles}>
+        <li style={listItemStyles}>
           <div style={markerStyles}>
             <EmailIcon />
           </div>
           {emailAddress}
         </li>
         <div style={listBreakStyles} />
-        <li style={itemStyles}>
+        <li style={listItemStyles}>
           <div style={markerStyles}>
             <PlaceIcon />
           </div>
@@ -94,27 +131,50 @@ const Contact = () => {
   );
 };
 
-export const Footer = () => {
-  const pages = siteMetadata.menuLinks;
+const FooterLinks = () => {
+  const menuLinks = siteMetadata.menuLinks;
+  const externalLinks = siteMetadata.externalLinks;
 
   return (
+    <>
+      <ul style={footerLinksStyles}>
+        {menuLinks.map((page) => {
+          return (
+            <li style={listItemStyles} key={page.name}>
+              <a href={page.link} style={hyperlinkStyles}>
+                {page.name}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+      <ul style={footerLinksStyles}>
+        {externalLinks.map((page) => {
+          return (
+            <li style={listItemStyles} key={page.name}>
+              <a href={page.link} style={hyperlinkStyles}>
+                {page.name}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </>
+  );
+};
+
+export const Footer = () => {
+  return (
     <div style={footerStyles}>
-      <div style={footerStyles}>
-        <CCIdentity />
-        <Contact />
-      </div>
-      <div>
-        <ul style={listStyles}>
-          {pages.map((page) => {
-            return (
-              <li style={itemStyles} key={page.name}>
-                <a href={page.link} style={hyperlinkStyles}>
-                  {page.name}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+      <div style={borderStyles} />
+      <div style={footerChildrenStyles}>
+        <div style={leftContainerStyles}>
+          <CCIdentity />
+          <Contact />
+        </div>
+        <div style={externalLinksStyles}>
+          <FooterLinks />
+        </div>
       </div>
     </div>
   );

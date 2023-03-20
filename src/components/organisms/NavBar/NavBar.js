@@ -1,10 +1,11 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { ButtonOutlined as Button } from "../../atoms";
-import { Navigation, HomeIcon } from "../../molecules";
+import { Navigation, CCTextIcon } from "../../molecules";
+import { siteMetadata } from "../../../../gatsby-config";
 
 // Styles
-const navBarStyle = {
+const navBarStyles = {
   justifyContent: "space-between",
   alignItems: "center",
   display: "flex",
@@ -14,22 +15,15 @@ const navBarStyle = {
   minWidth: "max-content",
 };
 
-// Constants
-const navItems = [
-  "Home",
-  "Technology",
-  "Features",
-  "Integrations",
-  "Solutions",
-  "Contact",
-];
-const buttonText = "Chat with SILVIA";
+export const NavBar = () => {
+  const textIconColor = "white";
+  const buttonText = "Chat with SILVIA";
+  const pages = siteMetadata.menuLinks;
 
-export const NavBar = ({ pageTitle, children }) => {
   return (
-    <div id="nav-bar" style={navBarStyle}>
-      <HomeIcon />
-      <Navigation navItems={navItems} />
+    <div id="nav-bar" style={navBarStyles}>
+      <CCTextIcon color={textIconColor} />
+      <Navigation pages={pages} />
       <Link to="/">
         <Button>{buttonText}</Button>
       </Link>

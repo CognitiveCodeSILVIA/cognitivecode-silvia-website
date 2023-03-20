@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `cognitivecode-silvia-website`,
+    title: `Cognitive Code | Silvia`,
     siteUrl: `https://www.yourdomain.tld`,
     menuLinks: [
       { name: "Home", link: "/" },
@@ -12,6 +12,12 @@ module.exports = {
       { name: "Integrations", link: "/integrations" },
       { name: "Solutions", link: "/solutions" },
       { name: "Contact", link: "/contact" },
+    ],
+    externalLinks: [
+      { name: "Terms & Conditions", link: "/" },
+      { name: "Privacy Policy", link: "/" },
+      { name: "Documentation", link: "/" },
+      { name: "GitHub", link: "/" },
     ],
   },
   plugins: [

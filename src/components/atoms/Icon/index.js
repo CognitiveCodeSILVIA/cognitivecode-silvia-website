@@ -1,3 +1,3 @@
-import { CCLogoWhite } from "./Icon";
+import { CCLogo } from "./Icon";
 
-export { CCLogoWhite };
+export { CCLogo };

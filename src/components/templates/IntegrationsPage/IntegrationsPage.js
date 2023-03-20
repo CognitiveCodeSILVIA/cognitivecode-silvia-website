@@ -1,10 +1,11 @@
 import * as React from "react";
-import { NavBar } from "../../organisms";
+import { NavBar, Footer } from "../../organisms";
 
 export const IntegrationsPage = () => {
   return (
     <>
       <NavBar />
+      <Footer />
     </>
   );
 };

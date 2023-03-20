@@ -1,4 +1,4 @@
 import { Navigation } from "./Navigation";
-import { HomeIcon } from "./HomeIcon";
+import { CCTextIcon } from "./CCTextIcon";
 
-export { Navigation, HomeIcon };
+export { Navigation, CCTextIcon };

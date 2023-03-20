@@ -1,10 +1,10 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { ButtonOutlined as Button } from "../../atoms";
-import { Navigation, HomeIcon } from "../../molecules";
+import { Navigation, CCTextIcon } from "../../molecules";
 
 // Styles
-const navBarStyle = {
+const navBarStyles = {
   justifyContent: "space-between",
   alignItems: "center",
   display: "flex",
@@ -26,9 +26,11 @@ const navItems = [
 const buttonText = "Chat with SILVIA";
 
 export const NavBar = ({ pageTitle, children }) => {
+  const textIconColor = "white";
+
   return (
-    <div id="nav-bar" style={navBarStyle}>
-      <HomeIcon />
+    <div id="nav-bar" style={navBarStyles}>
+      <CCTextIcon color={textIconColor} />
       <Navigation navItems={navItems} />
       <Link to="/">
         <Button>{buttonText}</Button>

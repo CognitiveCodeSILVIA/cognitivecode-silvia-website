@@ -1,28 +1,18 @@
 import * as React from "react";
-import CCLogo from "../../../assets/cc-logo-white.png";
+import CCLogoWhite from "../../../assets/cc-logo-white.png";
+import CCLogoNavy from "../../../assets/cc-logo-navy.png";
 
-export const CCLogoWhite = (props) => {
-  var size = props.size;
-
+export const CCLogo = ({ size, color }) => {
   //TODO: set sizes for large and default
-  if (size === "large")
-    return <img src={CCLogo} id="cc-logo-white-png" alt="CognitiveCode logo" />;
+  var ccLogo = CCLogoWhite;
+  if (color === "navy") {
+    ccLogo = CCLogoNavy;
+  }
+  const id = `cc-logo-${color}-png`;
+  const alt = "CognitiveCode logo";
+
+  if (size === "large") return <img src={ccLogo} id={id} alt={alt} />;
   if (size === "small")
-    return (
-      <img
-        src={CCLogo}
-        id="cc-logo-white-png"
-        alt="CognitiveCode logo"
-        width="37.71px"
-        height="39px"
-      />
-    );
-  return (
-    <img
-      src={CCLogo}
-      id="cc-logo-white-png"
-      alt="CognitiveCode logo"
-      maxWidth="75px"
-    />
-  );
+    return <img src={ccLogo} id={id} alt={alt} width="37.71px" height="39px" />;
+  return <img src={ccLogo} id={id} alt={alt} maxWidth="75px" />;
 };

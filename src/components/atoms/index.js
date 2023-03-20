@@ -1,5 +1,5 @@
 import { ButtonOutlined } from "./Button";
 import { NavItem } from "./NavItem";
-import { CCLogoWhite } from "./Icon";
+import { CCLogo } from "./Icon";
 
-export { ButtonOutlined, CCLogoWhite, NavItem };
+export { ButtonOutlined, CCLogo, NavItem };

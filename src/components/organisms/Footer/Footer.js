@@ -1,7 +1,8 @@
+import "@fontsource/source-sans-pro";
 import * as React from "react";
 import { CCTextIcon } from "../../molecules";
-import "@fontsource/source-sans-pro";
 import { Typography } from "@material-ui/core";
+import { Email as EmailIcon, Place as PlaceIcon } from "@material-ui/icons";
 
 // Styles
 const ccIdentityStyles = {
@@ -15,7 +16,28 @@ const ccIdentityStyles = {
 const contactStyles = {
   fontFamily: "Source Sans Pro",
   color: "#051334",
-  margin: "2em",
+  margin: "2em 2em 2em 0",
+  width: "250px",
+  borderLeft: "1px solid #3D588F",
+  paddingLeft: "2em",
+};
+
+const listStyles = {
+  listStyle: "none",
+  paddingLeft: 0,
+};
+
+const listBreakStyles = {
+  paddingBottom: "0.5em",
+};
+
+const itemStyles = {
+  display: "flex",
+  alignItems: "center",
+};
+
+const markerStyles = {
+  paddingRight: "0.75em",
 };
 
 const typographyStyles = {
@@ -47,10 +69,19 @@ const Contact = () => {
   return (
     <div style={contactStyles}>
       <Typography style={typographyStyles}>Contact Us</Typography>
-      <ul>
-        <li>{emailAddress}</li>
-        <li>
-          <div>{address}</div>
+      <ul style={listStyles}>
+        <li style={itemStyles}>
+          <div style={markerStyles}>
+            <EmailIcon />
+          </div>
+          {emailAddress}
+        </li>
+        <div style={listBreakStyles} />
+        <li style={itemStyles}>
+          <div style={markerStyles}>
+            <PlaceIcon />
+          </div>
+          {address}
         </li>
       </ul>
     </div>

@@ -1,3 +1,3 @@
-import { ButtonOutlined } from "./Button";
+import { ButtonOutlined, ButtonPrimary } from "./Button";
 
-export { ButtonOutlined };
+export { ButtonOutlined, ButtonPrimary };

@@ -1,6 +1,7 @@
 import {
   ButtonOutlined,
   ButtonPrimary,
+  ChatButton,
   LeftArrowButton,
   RightArrowButton,
 } from "./Button";
@@ -10,6 +11,7 @@ import { CCLogo } from "./Icon";
 export {
   ButtonOutlined,
   ButtonPrimary,
+  ChatButton,
   CCLogo,
   LeftArrowButton,
   NavItem,

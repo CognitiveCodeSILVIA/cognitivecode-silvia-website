@@ -2,9 +2,16 @@ import * as React from "react";
 import { Button, IconButton, SvgIcon } from "@material-ui/core";
 import { ArrowBack, ArrowForward } from "@material-ui/icons";
 import { withStyles } from "@material-ui/core/styles";
+import ChatIconSvg from "../../../assets/svg/chat-icon-white.svg";
 
-const arrowStyles = {
-  color: "#FFFFFF",
+const styles = {
+  arrrow: {
+    color: "#FFFFFF",
+  },
+  chatIcon: {
+    opacity: "1",
+    width: "38px",
+  },
 };
 
 export const ButtonOutlined = withStyles(() => ({
@@ -45,7 +52,7 @@ export const ButtonPrimary = withStyles(() => ({
   },
 }))(Button);
 
-const CustomIconButton = withStyles(() => ({
+const CyanIconButton = withStyles(() => ({
   root: {
     backgroundColor: "#06D9D9",
     "&:hover": {
@@ -55,18 +62,36 @@ const CustomIconButton = withStyles(() => ({
   },
 }))(IconButton);
 
+const TransparentIconButton = withStyles(() => ({
+  root: {
+    backgroundColor: "#FFFFFF 0",
+    "&:hover": {
+      opacity: "0.75",
+      filter: "drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25))",
+    },
+  },
+}))(IconButton);
+
 export const LeftArrowButton = () => {
   return (
-    <CustomIconButton>
-      <SvgIcon style={arrowStyles} component={ArrowBack} />
-    </CustomIconButton>
+    <CyanIconButton>
+      <SvgIcon style={styles.arrow} component={ArrowBack} />
+    </CyanIconButton>
   );
 };
 
 export const RightArrowButton = () => {
   return (
-    <CustomIconButton>
-      <SvgIcon style={arrowStyles} component={ArrowForward} />
-    </CustomIconButton>
+    <CyanIconButton>
+      <SvgIcon style={styles.arrow} component={ArrowForward} />
+    </CyanIconButton>
+  );
+};
+
+export const ChatButton = () => {
+  return (
+    <TransparentIconButton>
+      <img style={styles.chatIcon} src={ChatIconSvg} />
+    </TransparentIconButton>
   );
 };

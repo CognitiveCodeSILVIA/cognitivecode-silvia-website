@@ -1,5 +1,11 @@
-import { Button } from "@material-ui/core";
+import * as React from "react";
+import { Button, IconButton, SvgIcon } from "@material-ui/core";
+import { ArrowBack, ArrowForward } from "@material-ui/icons";
 import { withStyles } from "@material-ui/core/styles";
+
+const arrowStyles = {
+  color: "#FFFFFF",
+};
 
 export const ButtonOutlined = withStyles(() => ({
   root: {
@@ -38,3 +44,29 @@ export const ButtonPrimary = withStyles(() => ({
     },
   },
 }))(Button);
+
+const CustomIconButton = withStyles(() => ({
+  root: {
+    backgroundColor: "#06D9D9",
+    "&:hover": {
+      backgroundColor: "#97FFFF",
+      filter: "drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25))",
+    },
+  },
+}))(IconButton);
+
+export const LeftArrowButton = () => {
+  return (
+    <CustomIconButton>
+      <SvgIcon style={arrowStyles} component={ArrowBack} />
+    </CustomIconButton>
+  );
+};
+
+export const RightArrowButton = () => {
+  return (
+    <CustomIconButton>
+      <SvgIcon style={arrowStyles} component={ArrowForward} />
+    </CustomIconButton>
+  );
+};

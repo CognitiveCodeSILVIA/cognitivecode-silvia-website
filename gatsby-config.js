@@ -19,6 +19,13 @@ module.exports = {
       { name: "Documentation", link: "/" },
       { name: "GitHub", link: "/" },
     ],
+    homePageCopy: {
+      hero: {
+        header: "Conversational Intelligence",
+        paragraph:
+          "SILVIA is an automated NLP natural language interface that allows content creators to produce next-level conversationally immersive engaging experiences. ",
+      },
+    },
   },
   plugins: [
     "gatsby-plugin-sitemap",

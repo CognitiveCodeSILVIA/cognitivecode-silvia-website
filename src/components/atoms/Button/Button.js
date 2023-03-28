@@ -91,7 +91,7 @@ export const RightArrowButton = () => {
 export const ChatButton = () => {
   return (
     <TransparentIconButton>
-      <img style={styles.chatIcon} src={ChatIconSvg} />
+      <img style={styles.chatIcon} src={ChatIconSvg} alt="Chat icon" />
     </TransparentIconButton>
   );
 };

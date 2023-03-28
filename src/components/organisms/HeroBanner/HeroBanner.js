@@ -10,12 +10,15 @@ const styles = {
     flexDirection: "column",
     justifyContent: "center",
     width: "700px",
+    color: "#FFFFFF",
   },
   header: {
     fontWeight: 700,
     fontFamily: "inherit",
   },
   subtitle: {
+    fontWeight: 200,
+    fontFamily: "inherit",
     width: "60%",
     paddingLeft: "0.5em",
   },

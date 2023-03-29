@@ -5,9 +5,6 @@ import { withStyles } from "@material-ui/core/styles";
 import ChatIconSvg from "../../../assets/svg/chat-icon-white.svg";
 
 const styles = {
-  arrrow: {
-    color: "#FFFFFF",
-  },
   chatIcon: {
     opacity: "1",
     width: "38px",
@@ -55,6 +52,7 @@ export const ButtonPrimary = withStyles(() => ({
 const CyanIconButton = withStyles(() => ({
   root: {
     backgroundColor: "#06D9D9",
+    color: "#FFFFFF",
     "&:hover": {
       backgroundColor: "#97FFFF",
       filter: "drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25))",
@@ -75,7 +73,7 @@ const TransparentIconButton = withStyles(() => ({
 export const LeftArrowButton = () => {
   return (
     <CyanIconButton>
-      <SvgIcon style={styles.arrow} component={ArrowBack} />
+      <SvgIcon component={ArrowBack} />
     </CyanIconButton>
   );
 };
@@ -83,7 +81,7 @@ export const LeftArrowButton = () => {
 export const RightArrowButton = () => {
   return (
     <CyanIconButton>
-      <SvgIcon style={styles.arrow} component={ArrowForward} />
+      <SvgIcon component={ArrowForward} />
     </CyanIconButton>
   );
 };

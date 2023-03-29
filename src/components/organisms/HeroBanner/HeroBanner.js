@@ -6,11 +6,12 @@ import { ButtonPrimary } from "../../atoms";
 const styles = {
   container: {
     padding: "5em 0",
-    display: "flex",
-    flexDirection: "column",
+    display: "grid",
     justifyContent: "center",
+    alignItems: "center",
     width: "700px",
     color: "#FFFFFF",
+    margin: "9em 0",
   },
   header: {
     fontWeight: 700,

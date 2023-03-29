@@ -2,13 +2,30 @@ import * as React from "react";
 import { Typography } from "@material-ui/core";
 import { siteMetadata } from "../../../../gatsby-config";
 import { ButtonPrimary } from "../../atoms";
+import ChatUi from "../../../assets/chat-ui.png";
 
 const styles = {
-  container: {
+  parentContainer: {
+    display: "flex",
+  },
+  aboutContainer: {
     color: "#FFFFFF",
     backgroundColor: "rgba(15, 20, 30, 0.7)",
     borderRadius: "270px 0 0 270px",
-    padding: "4em 4em 4em 10em",
+    padding: "4em 10em",
+  },
+  chatUiContainer: {
+    background: "linear-gradient(180deg, #071230 0%, rgba(7, 18, 48, 0) 92.7%)",
+    borderRadius: "44px",
+    padding: "3em",
+    margin: "3em",
+    minWidth: "400px",
+    minHeight: "445px",
+    position: "relative",
+  },
+  chatUi: {
+    position: "absolute",
+    left: "5em",
   },
   header: {
     fontWeight: 700,
@@ -21,12 +38,18 @@ const styles = {
   },
 };
 
-const About = () => {};
+const ChatUI = () => {
+  return (
+    <div style={styles.chatUiContainer}>
+      <img style={styles.chatUi} src={ChatUi} alt="Chat UI" />
+    </div>
+  );
+};
 
-export const HomeAbout = () => {
+const About = () => {
   var copy = siteMetadata.homePageCopy.about;
   return (
-    <div style={styles.container}>
+    <div style={styles.aboutContainer}>
       <Typography style={styles.header} variant="h4" paragraph={true}>
         {copy.header}
       </Typography>
@@ -34,6 +57,15 @@ export const HomeAbout = () => {
         {copy.paragraph}
       </Typography>
       <ButtonPrimary>Learn More</ButtonPrimary>
+    </div>
+  );
+};
+
+export const HomeAbout = () => {
+  return (
+    <div style={styles.parentContainer}>
+      <ChatUI />
+      <About />
     </div>
   );
 };

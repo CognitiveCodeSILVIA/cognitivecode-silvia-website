@@ -1,14 +1,16 @@
 import * as React from "react";
 import { Footer, HeroBanner, HomeAbout, NavBar } from "../../organisms";
+import TopographPng from "../../../assets/topograph.png";
 
 const styles = {
   homeContainer: {
-    background: "linear-gradient(179.25deg, #041233 7.2%, #1C3B75 49.26%)",
+    background: `url(${TopographPng}) center / cover no-repeat, linear-gradient(179.25deg, #041233 7.2%, #1C3B75 49.26%)`,
   },
   heroContainer: {
     fontFamily: "inherit",
-    display: "grid",
-    justifyContent: "center",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   },
   navbar: {
     padding: "0 96px",

@@ -1,5 +1,5 @@
-import { Typography } from "@material-ui/core";
 import * as React from "react";
+import { Typography } from "@material-ui/core";
 import { siteMetadata } from "../../../../gatsby-config";
 import { ButtonPrimary } from "../../atoms";
 
@@ -17,7 +17,7 @@ const styles = {
     fontFamily: "inherit",
   },
   subtitle: {
-    fontWeight: 200,
+    fontWeight: 300,
     fontFamily: "inherit",
     width: "60%",
     paddingLeft: "0.5em",

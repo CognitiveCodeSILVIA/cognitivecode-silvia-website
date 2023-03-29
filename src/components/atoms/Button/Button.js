@@ -40,10 +40,10 @@ export const ButtonPrimary = withStyles(() => ({
     textTransform: "none",
     fontFamily: "inherit",
     fontWeight: 400,
-    padding: "0.5em 1.5em",
+    padding: "0.5em 3em",
     backgroundColor: "#06D9D9",
     color: "#000000",
-    borderRadius: "13px",
+    borderRadius: "25px",
     "&:hover": {
       backgroundColor: "#97FFFF",
       color: "#000000",

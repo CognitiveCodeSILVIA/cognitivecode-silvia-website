@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Footer, HeroBanner, NavBar } from "../../organisms";
+import { Footer, HeroBanner, HomeAbout, NavBar } from "../../organisms";
 
 const styles = {
   homeContainer: {
@@ -7,7 +7,7 @@ const styles = {
   },
   heroContainer: {
     fontFamily: "inherit",
-    display: "flex",
+    display: "grid",
     justifyContent: "center",
   },
   navbar: {
@@ -22,6 +22,7 @@ const Hero = () => {
   return (
     <div style={styles.heroContainer}>
       <HeroBanner />
+      <HomeAbout />
     </div>
   );
 };

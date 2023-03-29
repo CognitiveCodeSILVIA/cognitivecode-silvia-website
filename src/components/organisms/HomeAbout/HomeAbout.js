@@ -26,6 +26,8 @@ const styles = {
   chatUi: {
     position: "absolute",
     left: "5em",
+    display: "block",
+    width: "500px",
   },
   header: {
     fontWeight: 700,

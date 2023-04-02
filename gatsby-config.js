@@ -21,7 +21,7 @@ module.exports = {
     ],
     homePageCopy: {
       hero: {
-        header: "Conversational Intelligence",
+        header: "Conversational Intelligence.",
         paragraph:
           "SILVIA is an automated NLP natural language interface that allows content creators to produce next-level conversationally immersive engaging experiences. ",
       },

@@ -3,7 +3,7 @@ import "@fontsource/ubuntu";
 import { HomePage } from "../components/templates";
 
 const pageStyles = {
-  padding: "0 96px",
+  padding: "0",
   fontFamily: "Ubuntu",
   fontStyle: "normal",
 };

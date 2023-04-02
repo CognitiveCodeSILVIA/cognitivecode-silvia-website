@@ -1,5 +1,19 @@
-import { ButtonOutlined } from "./Button";
+import {
+  ButtonOutlined,
+  ButtonPrimary,
+  ChatButton,
+  LeftArrowButton,
+  RightArrowButton,
+} from "./Button";
 import { NavItem } from "./NavItem";
 import { CCLogo } from "./Icon";
 
-export { ButtonOutlined, CCLogo, NavItem };
+export {
+  ButtonOutlined,
+  ButtonPrimary,
+  ChatButton,
+  CCLogo,
+  LeftArrowButton,
+  NavItem,
+  RightArrowButton,
+};

@@ -1,4 +1,6 @@
-import { NavBar } from "./NavBar";
 import { Footer } from "./Footer";
+import { HeroBanner } from "./HeroBanner";
+import { NavBar } from "./NavBar";
+import { HomeAbout } from "./HomeAbout";
 
-export { NavBar, Footer };
+export { Footer, HeroBanner, HomeAbout, NavBar };

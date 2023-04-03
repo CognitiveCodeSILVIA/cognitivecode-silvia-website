@@ -9,6 +9,9 @@ const styles = {
     opacity: "1",
     width: "38px",
   },
+  navButton: {
+    fontSize: "40px",
+  },
 };
 
 export const ButtonOutlined = withStyles(() => ({
@@ -73,7 +76,7 @@ const TransparentIconButton = withStyles(() => ({
 export const LeftArrowButton = () => {
   return (
     <CyanIconButton>
-      <SvgIcon component={ArrowBack} />
+      <SvgIcon style={styles.navButton} component={ArrowBack} />
     </CyanIconButton>
   );
 };
@@ -81,7 +84,7 @@ export const LeftArrowButton = () => {
 export const RightArrowButton = () => {
   return (
     <CyanIconButton>
-      <SvgIcon component={ArrowForward} />
+      <SvgIcon style={styles.navButton} component={ArrowForward} />
     </CyanIconButton>
   );
 };

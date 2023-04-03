@@ -1,5 +1,11 @@
 import * as React from "react";
-import { Footer, HeroBanner, HomeAbout, NavBar } from "../../organisms";
+import {
+  Footer,
+  HeroBanner,
+  HomeAbout,
+  NavBar,
+  NewFrontier,
+} from "../../organisms";
 import TopographPng from "../../../assets/topograph.png";
 
 const styles = {
@@ -55,6 +61,7 @@ export const HomePage = () => {
           <NavBar />
         </div>
         <Hero />
+        <NewFrontier />
       </div>
       <div style={styles.footerContainer}>
         <Footer />

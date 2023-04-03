@@ -12,7 +12,9 @@ const styles = {
     color: "#FFFFFF",
     backgroundColor: "rgba(15, 20, 30, 0.7)",
     borderRadius: "270px 0 0 270px",
-    padding: "4em 10em",
+    padding: "4em 10em 4em 12em",
+    minHeight: "300px",
+    maxHeight: "450px",
   },
   chatUiContainer: {
     background: "linear-gradient(180deg, #071230 0%, rgba(7, 18, 48, 0) 92.7%)",
@@ -32,11 +34,14 @@ const styles = {
   header: {
     fontWeight: 700,
     fontFamily: "inherit",
+    marginTop: "1em",
   },
   paragraph: {
     fontWeight: 300,
     fontFamily: "inherit",
     margin: "2em 0",
+    minWidth: "500px",
+    maxWidth: "1000px",
   },
 };
 

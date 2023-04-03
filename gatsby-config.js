@@ -35,6 +35,44 @@ module.exports = {
         paragraph:
           "SILVIA is an automated NLP natural language interface that allows content creators to produce next-level conversationally immersive engaging experiences.",
       },
+      carousel: [
+        {
+          tag: "carousel-1",
+          header: "Virtual Reality",
+          paragraph:
+            "SILVIA is an automated NLP natural language interface that allows content creators to produce next-level conversationally immersive engaging experiences.",
+        },
+        {
+          tag: "carousel-2",
+          header: "Unity Friendly",
+          paragraph:
+            "SILVIA is an automated NLP natural language interface that allows content creators to produce next-level conversationally immersive engaging experiences.",
+        },
+        {
+          tag: "carousel-3",
+          header: "Automation",
+          paragraph:
+            "SILVIA is an automated NLP natural language interface that allows content creators to produce next-level conversationally immersive engaging experiences.",
+        },
+        {
+          tag: "carousel-4",
+          header: "Web",
+          paragraph:
+            "SILVIA is an automated NLP natural language interface that allows content creators to produce next-level conversationally immersive engaging experiences.",
+        },
+        {
+          tag: "carousel-5",
+          header: "Mobile",
+          paragraph:
+            "SILVIA is an automated NLP natural language interface that allows content creators to produce next-level conversationally immersive engaging experiences.",
+        },
+        {
+          tag: "carousel-6",
+          header: "Augmented Reality",
+          paragraph:
+            "SILVIA is an automated NLP natural language interface that allows content creators to produce next-level conversationally immersive engaging experiences.",
+        },
+      ],
     },
   },
   plugins: [

@@ -3,5 +3,6 @@ import { HeroBanner } from "./HeroBanner";
 import { NavBar } from "./NavBar";
 import { HomeAbout } from "./HomeAbout";
 import { NewFrontier } from "./NewFrontier";
+import { Carousel } from "./Carousel";
 
-export { Footer, HeroBanner, HomeAbout, NavBar, NewFrontier };
+export { Carousel, Footer, HeroBanner, HomeAbout, NavBar, NewFrontier };

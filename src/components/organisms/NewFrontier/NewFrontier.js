@@ -2,7 +2,7 @@ import * as React from "react";
 import { Typography } from "@material-ui/core";
 import { siteMetadata } from "../../../../gatsby-config";
 import { ButtonPrimary, LeftArrowButton } from "../../atoms";
-import { Card } from "../../molecules";
+import { Carousel } from "../index";
 
 const styles = {
   parentContainer: {
@@ -20,6 +20,8 @@ const styles = {
   },
   carouselContainer: {
     position: "relative",
+    overflowX: "auto",
+    width: "100vw",
   },
   header: {
     fontWeight: 700,
@@ -56,8 +58,7 @@ const About = () => {
 };
 
 export const NewFrontier = () => {
-  var carousel = siteMetadata.homePageCopy.carousel;
-  var item = carousel[0];
+  var carouselItems = siteMetadata.homePageCopy.carousel;
 
   return (
     <div style={styles.parentContainer}>
@@ -66,12 +67,7 @@ export const NewFrontier = () => {
         <LeftArrowButton size="large" />
       </div>
       <div style={styles.carouselContainer}>
-        <Card
-          icon={item.icon}
-          tag={item.tag}
-          header={item.header}
-          text={item.paragraph}
-        />
+        <Carousel items={carouselItems} />
       </div>
     </div>
   );

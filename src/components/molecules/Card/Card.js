@@ -7,7 +7,8 @@ const styles = {
   parentContainer: {
     position: "relative",
     height: "500px",
-    width: "700px",
+    minWidth: "700px",
+    margin: "1em",
   },
   childContainer: {
     position: "absolute",
@@ -43,7 +44,9 @@ const styles = {
     backdropFilter: "blur(10px)",
   },
   icon: {
-    width: "75px",
+    width: "70px",
+    height: "70px",
+    objectFit: "contain",
     padding: "1.5em",
     border: "solid 1px #4B95DA",
     borderRadius: "5px",

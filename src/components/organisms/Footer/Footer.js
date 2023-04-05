@@ -5,7 +5,6 @@ import { Typography } from "@material-ui/core";
 import { Email as EmailIcon, Place as PlaceIcon } from "@material-ui/icons";
 import { siteMetadata } from "../../../../gatsby-config";
 
-// Styles
 const styles = {
   parentContainer: {
     display: "flex",

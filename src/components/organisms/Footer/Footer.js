@@ -6,90 +6,87 @@ import { Email as EmailIcon, Place as PlaceIcon } from "@material-ui/icons";
 import { siteMetadata } from "../../../../gatsby-config";
 
 // Styles
-const borderStyles = {
-  borderTop: "solid 1px #3D588F",
-  alignSelf: "center",
-  width: "100%",
-};
-
-const ccIdentityStyles = {
-  margin: "2em 2em 2em 0",
-  width: "250px",
-  height: "fit-content",
-  color: "#253D6D",
-  lineHeight: "1.35em",
-};
-
-const contactStyles = {
-  fontFamily: "Source Sans Pro",
-  color: "#051334",
-  margin: "2em 2em 2em 0",
-  width: "250px",
-  borderLeft: "1px solid #3D588F",
-  paddingLeft: "2em",
-};
-
-const externalLinksStyles = {
-  display: "flex",
-  justifyContent: "space-between",
-  width: "300px",
-  paddingTop: "2em",
-  paddingRight: "3em",
-};
-
-const footerStyles = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  margin: "1em",
-  minWidth: "1020px",
-};
-
-const footerChildrenStyles = {
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "space-between",
-};
-
-const footerLinksStyles = {
-  listStyle: "none",
-  paddingLeft: 0,
-  lineHeight: "2.5em",
-};
-
-const hyperlinkStyles = {
-  textDecoration: "none",
-  cursor: "pointer",
-};
-
-const leftContainerStyles = {
-  display: "flex",
-  justifyContent: "space-between",
-  padding: "1em",
-};
-
-const listStyles = {
-  listStyle: "none",
-  paddingLeft: 0,
-};
-
-const listBreakStyles = {
-  paddingBottom: "0.5em",
-};
-
-const listItemStyles = {
-  display: "flex",
-  alignItems: "center",
-};
-
-const markerStyles = {
-  paddingRight: "0.75em",
-};
-
-const typographyStyles = {
-  fontFamily: "Source Sans Pro",
-  fontWeight: 700,
-  fontSize: "x-large",
+const styles = {
+  parentContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    margin: "1em",
+    minWidth: "1020px",
+    padding: "0.5em",
+  },
+  childContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  contactContainer: {
+    fontFamily: "Source Sans Pro",
+    color: "#051334",
+    margin: "2em 2em 2em 0",
+    width: "250px",
+    borderLeft: "1px solid #3D588F",
+    paddingLeft: "2em",
+  },
+  linksContainer: {
+    display: "flex",
+    justifyContent: "space-between",
+    width: "300px",
+    paddingTop: "2em",
+    paddingRight: "3em",
+  },
+  border: {
+    borderTop: "solid 1px #3D588F",
+    alignSelf: "center",
+    width: "100%",
+  },
+  externalLinks: {
+    display: "flex",
+    justifyContent: "space-between",
+    width: "300px",
+    paddingTop: "2em",
+    paddingRight: "3em",
+  },
+  identity: {
+    margin: "2em 2em 2em 0",
+    width: "250px",
+    height: "fit-content",
+    color: "#253D6D",
+    lineHeight: "1.35em",
+  },
+  links: {
+    listStyle: "none",
+    paddingLeft: 0,
+    lineHeight: "2.5em",
+  },
+  hyperlink: {
+    textDecoration: "none",
+    cursor: "pointer",
+  },
+  leftContainer: {
+    display: "flex",
+    justifyContent: "space-between",
+    padding: "1em",
+  },
+  list: {
+    listStyle: "none",
+    paddingLeft: 0,
+  },
+  listBreak: {
+    paddingBottom: "0.5em",
+  },
+  listItem: {
+    display: "flex",
+    alignItems: "center",
+  },
+  marker: {
+    paddingRight: "0.75em",
+  },
+  typography: {
+    fontFamily: "Source Sans Pro",
+    fontWeight: 700,
+    fontSize: "x-large",
+  },
 };
 
 const CCIdentity = () => {
@@ -98,7 +95,7 @@ const CCIdentity = () => {
     "SILVIA breathes life into virtual characters and voice interfaces by converging a breakthrough technology in NLP and A.I.";
 
   return (
-    <div style={ccIdentityStyles}>
+    <div style={styles.identity}>
       <CCTextIcon color={color} />
       <p>{text}</p>
     </div>
@@ -110,18 +107,18 @@ const Contact = () => {
   const address = "80 Red Schoolhouse Road,\nSpring Valley, NY 10977";
 
   return (
-    <div style={contactStyles}>
-      <Typography style={typographyStyles}>Contact Us</Typography>
-      <ul style={listStyles}>
-        <li style={listItemStyles}>
-          <div style={markerStyles}>
+    <div style={styles.contactContainer}>
+      <Typography style={styles.typography}>Contact Us</Typography>
+      <ul style={styles.list}>
+        <li style={styles.listItem}>
+          <div style={styles.marker}>
             <EmailIcon />
           </div>
           {emailAddress}
         </li>
-        <div style={listBreakStyles} />
-        <li style={listItemStyles}>
-          <div style={markerStyles}>
+        <div style={styles.listBreak} />
+        <li style={styles.listItem}>
+          <div style={styles.marker}>
             <PlaceIcon />
           </div>
           {address}
@@ -137,22 +134,22 @@ const FooterLinks = () => {
 
   return (
     <>
-      <ul style={footerLinksStyles}>
+      <ul style={styles.links}>
         {menuLinks.map((page) => {
           return (
-            <li style={listItemStyles} key={page.name}>
-              <a href={page.link} style={hyperlinkStyles}>
+            <li style={styles.listItem} key={page.name}>
+              <a href={page.link} style={styles.hyperlink}>
                 {page.name}
               </a>
             </li>
           );
         })}
       </ul>
-      <ul style={footerLinksStyles}>
+      <ul style={styles.links}>
         {externalLinks.map((page) => {
           return (
-            <li style={listItemStyles} key={page.name}>
-              <a href={page.link} style={hyperlinkStyles}>
+            <li style={styles.listItem} key={page.name}>
+              <a href={page.link} style={styles.hyperlink}>
                 {page.name}
               </a>
             </li>
@@ -165,14 +162,14 @@ const FooterLinks = () => {
 
 export const Footer = () => {
   return (
-    <div style={footerStyles}>
-      <div style={borderStyles} />
-      <div style={footerChildrenStyles}>
-        <div style={leftContainerStyles}>
+    <div style={styles.parentContainer}>
+      <div style={styles.border} />
+      <div style={styles.childContainer}>
+        <div style={styles.leftContainer}>
           <CCIdentity />
           <Contact />
         </div>
-        <div style={externalLinksStyles}>
+        <div style={styles.linksContainer}>
           <FooterLinks />
         </div>
       </div>

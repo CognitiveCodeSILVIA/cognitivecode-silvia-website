@@ -1,4 +1,5 @@
 import { Navigation } from "./Navigation";
 import { CCTextIcon } from "./CCTextIcon";
+import { Card } from "./Card";
 
-export { Navigation, CCTextIcon };
+export { Navigation, Card, CCTextIcon };

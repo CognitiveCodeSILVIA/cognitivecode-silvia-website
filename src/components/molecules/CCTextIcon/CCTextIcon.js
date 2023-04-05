@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { Typography } from "@material-ui/core";
 import { CCLogo } from "../../atoms";
 import { withStyles } from "@material-ui/styles";
+import { Typography } from "@material-ui/core";
 
 const TypographyWhite = withStyles(() => ({
   root: {

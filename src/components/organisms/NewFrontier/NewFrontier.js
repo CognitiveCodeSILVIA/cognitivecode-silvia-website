@@ -2,11 +2,14 @@ import * as React from "react";
 import { Typography } from "@material-ui/core";
 import { siteMetadata } from "../../../../gatsby-config";
 import { ButtonPrimary, LeftArrowButton } from "../../atoms";
+import { Card } from "../../molecules";
 
 const styles = {
   parentContainer: {
     padding: "10em 0",
     position: "relative",
+    display: "flex",
+    width: "100%",
   },
   aboutContainer: {
     color: "#FFFFFF",
@@ -14,6 +17,9 @@ const styles = {
     borderRadius: "0 270px 270px 0",
     padding: "4em 10em 4em 5em",
     width: "min-content",
+  },
+  carouselContainer: {
+    position: "relative",
   },
   header: {
     fontWeight: 700,
@@ -27,6 +33,7 @@ const styles = {
     width: "400px",
   },
   navButton: {
+    zIndex: 2,
     position: "absolute",
     bottom: "23em",
     left: "38em",
@@ -49,11 +56,22 @@ const About = () => {
 };
 
 export const NewFrontier = () => {
+  var carousel = siteMetadata.homePageCopy.carousel;
+  var item = carousel[0];
+
   return (
     <div style={styles.parentContainer}>
       <About />
       <div style={styles.navButton}>
         <LeftArrowButton size="large" />
+      </div>
+      <div style={styles.carouselContainer}>
+        <Card
+          icon={item.icon}
+          tag={item.tag}
+          header={item.header}
+          text={item.paragraph}
+        />
       </div>
     </div>
   );

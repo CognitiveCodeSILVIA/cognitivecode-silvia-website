@@ -6,6 +6,7 @@ const pageStyles = {
   padding: "0",
   fontFamily: "Ubuntu",
   fontStyle: "normal",
+  overflowX: "hidden",
 };
 
 const IndexPage = () => {

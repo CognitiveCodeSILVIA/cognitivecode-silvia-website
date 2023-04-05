@@ -23,7 +23,8 @@ const styles = {
     width: "275px",
     height: "300px",
     backgroundColor: "rgba(0, 0, 0, 0.5)",
-    filter: "blur(10px)",
+    backdropFilter: "blur(10px)",
+    filter: "blur(2px)",
     color: "#FFFFFF",
   },
   contentContainer: {
@@ -39,12 +40,14 @@ const styles = {
     width: "100%",
     height: "100%",
     borderRadius: "50px 50px 0 50px",
+    backdropFilter: "blur(10px)",
   },
   icon: {
     width: "75px",
     padding: "1.5em",
     border: "solid 1px #4B95DA",
     borderRadius: "5px",
+    backgroundColor: "rgba(255,255,255,0.1)",
   },
   header: {
     marginTop: "0.5em",

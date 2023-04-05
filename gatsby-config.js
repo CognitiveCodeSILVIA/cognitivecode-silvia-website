@@ -38,36 +38,42 @@ module.exports = {
       carousel: [
         {
           tag: "carousel-1",
+          icon: "vr",
           header: "Virtual Reality",
           paragraph:
             "SILVIA is an automated NLP natural language interface that allows content creators to produce next-level conversationally immersive engaging experiences.",
         },
         {
           tag: "carousel-2",
+          icon: "unity",
           header: "Unity Friendly",
           paragraph:
             "SILVIA is an automated NLP natural language interface that allows content creators to produce next-level conversationally immersive engaging experiences.",
         },
         {
           tag: "carousel-3",
+          icon: "brain",
           header: "Automation",
           paragraph:
             "SILVIA is an automated NLP natural language interface that allows content creators to produce next-level conversationally immersive engaging experiences.",
         },
         {
           tag: "carousel-4",
+          icon: "web",
           header: "Web",
           paragraph:
             "SILVIA is an automated NLP natural language interface that allows content creators to produce next-level conversationally immersive engaging experiences.",
         },
         {
           tag: "carousel-5",
+          icon: "mobile",
           header: "Mobile",
           paragraph:
             "SILVIA is an automated NLP natural language interface that allows content creators to produce next-level conversationally immersive engaging experiences.",
         },
         {
           tag: "carousel-6",
+          icon: "ar",
           header: "Augmented Reality",
           paragraph:
             "SILVIA is an automated NLP natural language interface that allows content creators to produce next-level conversationally immersive engaging experiences.",
